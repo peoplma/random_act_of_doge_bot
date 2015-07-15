@@ -42,9 +42,9 @@ def pick_random_comment():
 			continue
 		else:	
 			if comment.id not in already_done and has_praw and author.name != 'Randomactofdogebot':
-            comment.reply('This is a random act of doge! +/u/dogetipbot ' + str(rand_amount(amount_min, amount_max)) + ' doge\n\nPlease consider tipping this bot to keep it running!\n\n[Bot Info](http://www.reddit.com/r/dogecoin/comments/1yi0s1/all_the_information_you_need_to_know_about_me/) ---- [Source Code](https://github.com/Healdb/random_act_of_doge_bot)')
-            already_done.add(comment.id)
-            break
+            		   comment.reply('This is a random act of doge! +/u/dogetipbot ' + str(rand_amount(amount_min, amount_max)) + ' doge\n\nPlease consider tipping this bot to keep it running!\n\n[Bot Info](http://www.reddit.com/r/dogecoin/comments/1yi0s1/all_the_information_you_need_to_know_about_me/) ---- [Source Code](https://github.com/Healdb/random_act_of_doge_bot)')
+        		   already_done.add(comment.id)
+        		   break
 def lucky_tip(message, amount):
     if amount < 100.1:  ## Stop mega payouts
         message.reply("Your tip was a lucky tip!\n\n+/u/dogetipbot " + str(amount * 2) + " doge")
